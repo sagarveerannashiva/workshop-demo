@@ -1,0 +1,10 @@
+---
+- name: ansible lint verifier
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Debug code
+      ansible.builtin.debug:
+        msg: "Just a test message for verifier check
+

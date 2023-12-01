@@ -1,0 +1,17 @@
+name: Ansible lint demo
+run-name: ${{ github.actor }} is testing out ansible lint using Github actions 🚀
+on: [push]
+jobs:
+  Lint-verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install python3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run ansible lint
+        uses: ansible/ansible-lint-action@main
+        with:
+          path: "playbooks/"
