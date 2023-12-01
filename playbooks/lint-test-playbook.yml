@@ -7,4 +7,3 @@
     - name: Debug code
       ansible.builtin.debug:
         msg: "Just a test message for verifier check"
-        
